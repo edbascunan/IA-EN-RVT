@@ -1,8 +1,8 @@
-# 🤖 IA_RVT 2026
+# 🤖 IA-EN-RVT 2026
 
 **Sistema BIM Autónomo con Inteligencia Artificial para Revit 2026**
 
-IA_RVT es un sistema revolucionario que permite controlar Revit 2026 mediante comandos de lenguaje natural, voz, imágenes y videos.
+IA-EN-RVT es un sistema revolucionario que permite controlar Revit 2026 mediante comandos de lenguaje natural, voz, imágenes y videos.
 
 ## ✨ Características Principales
 
@@ -14,7 +14,7 @@ IA_RVT es un sistema revolucionario que permite controlar Revit 2026 mediante co
 
 ## 🚀 Instalación Rápida
 
-1. Clonar repositorio: `git clone https://github.com/edbascunan/IA_RVT.git`
+1. Clonar repositorio: `git clone https://github.com/edbascunan/IA-EN-RVT.git`
 2. Crear entorno virtual: `python -m venv venv`
 3. Instalar dependencias: `pip install -r requirements.txt`
 4. Configurar token: `cp .env.example .env` (añadir TELEGRAM_TOKEN)
@@ -44,7 +44,7 @@ Ejemplos:
 ## 📁 Estructura
 
 ```
-IA_RVT/
+IA-EN-RVT/
 ├── backend_ai/              # Backend IA
 │   ├── bot_master.py       # Bot Telegram
 │   ├── orchestrator.py     # Orquestador
