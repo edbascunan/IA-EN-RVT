@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Entorno
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/*.log
+
+# Revit
+*.rvt.backup*
+
+# Sistema
+Thumbs.db
+
+# Datos temporales
+backend_ai/shared/*.json
+!backend_ai/shared/.gitkeep
