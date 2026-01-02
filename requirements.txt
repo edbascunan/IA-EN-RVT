@@ -1,4 +1,5 @@
 # IA_RVT - Dependencias Python
+# =============================
 
 # Bot de Telegram
 python-telegram-bot==20.7
@@ -7,9 +8,9 @@ python-telegram-bot==20.7
 openai==1.6.1
 anthropic==0.8.1
 
-# RAG y embeddings
+# RAG y embeddings (local)
 sentence-transformers==2.2.2
-faiss-cpu==1.7.4
+faiss-cpu==1.8.0
 chromadb==0.4.22
 
 # Procesamiento de archivos
@@ -17,15 +18,15 @@ PyPDF2==3.0.1
 python-docx==1.1.0
 openpyxl==3.1.2
 
-# Visión
+# Visión (imágenes)
 Pillow==10.1.0
 opencv-python==4.8.1.78
 
-# Audio
+# Audio (Speech-to-Text)
 openai-whisper==20231117
 soundfile==0.12.1
 
-# Video
+# Video (YouTube)
 yt-dlp==2023.12.30
 moviepy==1.0.3
 
