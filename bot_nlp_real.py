@@ -127,7 +127,7 @@ Usando OpenAI GPT para entender cualquier instrucción:
 🔧 *Estado del Sistema IA-EN-RVT*
 
 🤖 Bot: 🟢 Activo con NLP Real
-🧠 OpenAI: {'🟢 Configurado 1.0.0+' if openai_configured else '❌ No configurado'}
+🧠 OpenAI: {'🟢 Configurado 1.0.0+ (gpt-3.5-turbo)' if openai_configured else '❌ No configurado'}
 📁 Comando JSON: {'🟢 Conectado' if command_exists else '🔴 Desconectado'}
 📅 Timestamp: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 
@@ -138,6 +138,7 @@ Usando OpenAI GPT para entender cualquier instrucción:
 • Respuestas inteligentes
 • OpenAI 1.0.0+ compatible
 • Desplegado en Railway
+• ✅ Modelo: gpt-3.5-turbo
 
 💡 *Usa cualquier instrucción en lenguaje natural*
             """
@@ -158,6 +159,7 @@ El bot se desplegará automáticamente en Railway para:
 • 📈 Escalabilidad automática
 • 🔒 Mayor estabilidad
 • OpenAI 1.0.0+ totalmente compatible
+• ✅ Modelo gpt-3.5-turbo
 
 *El despliegue ya está configurado y funcionando*
         """
@@ -211,9 +213,9 @@ Tipos de acciones:
 Responde de forma clara y útil. Si necesitas más información, pregunta.
             """
             
-            # NUEVA API OpenAI 1.0.0+
+            # NUEVA API OpenAI 1.0.0+ - USANDO gpt-3.5-turbo
             response = self.client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": message}
@@ -248,9 +250,9 @@ Responde SOLO con un JSON válido:
 {{"action": "...", "element": "...", "instruction": "...", "parameters": {{}}}}
             """
             
-            # NUEVA API OpenAI 1.0.0+
+            # NUEVA API OpenAI 1.0.0+ - USANDO gpt-3.5-turbo
             response = self.client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "Eres un generador de comandos JSON. Responde solo con JSON válido."},
                     {"role": "user", "content": classification_prompt}
@@ -330,9 +332,9 @@ Responde SOLO con un JSON válido:
         """Ejecutar el bot"""
         logger.info("🤖 Iniciando Bot IA-RVT con NLP Real...")
         logger.info(f"Token: {self.token[:20]}...")
-        logger.info(f"OpenAI: {'Configurado 1.0.0+' if self.openai_api_key else 'No configurado'}")
+        logger.info(f"OpenAI: {'Configurado 1.0.0+ (gpt-3.5-turbo)' if self.openai_api_key else 'No configurado'}")
         logger.info(f"Comando path: {self.command_path}")
-        logger.info("🧠 NLP Real con OpenAI 1.0.0+ activado")
+        logger.info("🧠 NLP Real con OpenAI 1.0.0+ activado - gpt-3.5-turbo")
         
         try:
             self.app.run_polling(allowed_updates=Update.ALL_TYPES)
