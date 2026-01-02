@@ -1,55 +1,12 @@
-# IA-EN-RVT 2026 - Bot NLP Real con OpenAI
+# IA-EN-RVT 2026 - Bot Telegram Minimalista
 # =========================================
 
 # Telegram Bot Framework
 python-telegram-bot==20.7
-python-telegram-bot[webhooks]==20.7
 
 # OpenAI para NLP Real
 openai==1.3.8
 
-# APIs de IA adicionales
-anthropic==0.7.7
-google-generativeai==0.3.2
-
-# Procesamiento de documentos
-PyPDF2==3.0.1
-python-docx==1.1.0
-pandas==2.1.4
-openpyxl==3.1.2
-
-# Base de datos vectorial y embeddings
-chromadb==0.4.18
-sentence-transformers==2.2.2
-numpy==1.24.4
-
-# YouTube y multimedia
-yt-dlp==2023.12.30
-openai-whisper==20231117
-
-# Utilidades
+# Utilidades básicas
 python-dotenv==1.0.0
 requests==2.31.0
-aiohttp==3.9.1
-
-# CAD y archivos técnicos
-ezdxf==1.1.3
-matplotlib==3.8.2
-
-# Logging y debugging
-loguru==0.7.2
-
-# Fecha y tiempo
-python-dateutil==2.8.2
-
-# Procesamiento de imágenes
-Pillow==10.1.0
-opencv-python==4.8.1.78
-
-# Configuración y entorno
-pydantic==2.5.2
-typing-extensions==4.9.0
-
-# Web framework para Railway
-fastapi==0.104.1
-uvicorn==0.24.0
