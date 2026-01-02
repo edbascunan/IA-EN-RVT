@@ -4,7 +4,7 @@ IA-EN-RVT 2026 - Bot Simple con OpenRouter
 ==========================================
 
 Bot simple y funcional con OpenRouter
-Sin problemas de parsing - Despliegue urgente
+Modelo corregido - Despliegue urgente
 Autor: Eduardo Bascuñán
 """
 
@@ -37,8 +37,8 @@ class IA_RVT_Simple_Bot:
             base_url="https://openrouter.ai/api/v1"
         )
         
-        # Modelo gratuito
-        self.model = "meta-llama/llama-3.2-3b-instruct:free"
+        # Modelo que funciona en OpenRouter
+        self.model = "gpt-3.5-turbo"
         
         # Inicializar aplicación
         self.app = Application.builder().token(self.token).build()
@@ -106,7 +106,7 @@ class IA_RVT_Simple_Bot:
 
 🌐 Capacidades:
 • NLP real con OpenRouter
-• Modelos gratuitos
+• Modelos disponibles
 • Sin límites de cuota
 • Desplegado en Railway
 • Modelo: {self.model}
@@ -146,7 +146,7 @@ Ayuda al usuario con:
 
 Responde de forma clara y útil."""
             
-            # OpenRouter API
+            # OpenRouter API con modelo corregido
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[
