@@ -1,11 +1,11 @@
-# IA-EN-RVT 2026 - Bot Telegram Minimalista
+# IA-EN-RVT 2026 - Bot con Hugging Face IA
 # =========================================
 
 # Telegram Bot Framework
 python-telegram-bot==20.7
 
-# OpenAI para NLP Real
-openai==1.3.8
+# Hugging Face - IA Real Gratuita
+huggingface-hub==0.19.4
 
 # Utilidades básicas
 python-dotenv==1.0.0
