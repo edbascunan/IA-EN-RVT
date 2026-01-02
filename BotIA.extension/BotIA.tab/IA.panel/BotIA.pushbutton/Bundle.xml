@@ -1,0 +1,12 @@
+<Bundle xmlns="http://schemas.revit.com/2014/bundle" Name="BotIA" 
+              Description="Bot Inteligente con IA para Revit" 
+              Author="Eduardo Bascunan">
+    <Component Name="BotIA" 
+               Description="Ejecuta comandos en lenguaje natural para automatización BIM"
+               ButtonText="🤖 Bot IA"
+               Source="script.py"
+               Icon="icon.png"
+               ToolTip="Bot IA - Comandos en lenguaje natural para automatización de Revit">
+        <Button />
+    </Component>
+</Bundle>

@@ -1,0 +1,11 @@
+# Panel Configuration
+# ===================
+
+# Name of the panel
+name: Bot NLP
+
+# Description
+description: "Bot inteligente para automatización BIM"
+
+# Visibility
+visibility: true

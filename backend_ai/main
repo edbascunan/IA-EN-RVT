@@ -1,0 +1,21 @@
+def main():
+    """Función principal"""
+    # Cargar configuración
+    token = os.getenv('TELEGRAM_BOT_TOKEN')
+    if not token:
+        print("❌ Error: TELEGRAM_BOT_TOKEN no encontrado en variables de entorno")
+        print("Por favor configura el token en tu archivo .env o variable de entorno")
+        return
+    
+    try:
+        # Crear y ejecutar el bot
+        bot = YouTubeBot(token)
+        asyncio.run(bot.run())
+    except KeyboardInterrupt:
+        print("\n🛑 Bot detenido por el usuario")
+    except Exception as e:
+        print(f"❌ Error ejecutando el bot: {e}")
+        logger.error(f"Error en main: {e}")
+
+if __name__ == "__main__":
+    main()

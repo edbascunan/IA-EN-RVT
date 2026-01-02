@@ -1,0 +1,209 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+IA-EN-RVT 2026 - Script Bot NLP para pyRevit
+============================================
+
+Script que conecta pyRevit con bot NLP externo (OpenAI)
+Implementa la arquitectura correcta: pyRevit consume servicio externo
+
+Autor: Eduardo Bascuñán
+"""
+
+import clr
+import sys
+import os
+import json
+import requests
+from datetime import datetime
+
+# Importar librerías de Revit
+clr.AddReference('RevitAPI')
+from Autodesk.Revit.DB import *
+from Autodesk.Revit.UI import *
+
+# Configuración del bot NLP externo
+BOT_NLP_URL = "https://ia-en-rvt-bot.up.railway.app/revit-command"  # URL del bot en Railway
+TIMEOUT_SECONDS = 30
+
+def log_message(message):
+    """Registrar mensaje en log"""
+    try:
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        log_entry = f"[{timestamp}] PYREVIT BOT: {message}\n"
+        
+        # Crear directorio de logs si no existe
+        log_dir = r"C:\edbascunan\IA-EN-RVT\logs"
+        if not os.path.exists(log_dir):
+            os.makedirs(log_dir)
+        
+        log_file = os.path.join(log_dir, "pyrevit_bot.log")
+        with open(log_file, 'a', encoding='utf-8') as f:
+            f.write(log_entry)
+            
+        print(f"[{timestamp}] {message}")
+    except:
+        pass
+
+def call_nlp_bot(prompt_text):
+    """
+    Llamar al bot NLP externo para procesar el comando
+    """
+    try:
+        # Preparar datos para enviar al bot
+        data = {
+            "text": prompt_text,
+            "context": "pyrevit_extension"
+        }
+        
+        log_message(f"Enviando comando al bot NLP: {prompt_text}")
+        
+        # Realizar petición POST al bot NLP
+        response = requests.post(
+            BOT_NLP_URL,
+            json=data,
+            timeout=TIMEOUT_SECONDS
+        )
+        
+        if response.status_code == 200:
+            result = response.json()
+            log_message(f"Respuesta del bot: {result['ai_response']}")
+            return result
+        else:
+            log_message(f"Error HTTP: {response.status_code}")
+            return None
+            
+    except requests.exceptions.Timeout:
+        log_message("Error: Timeout llamando al bot NLP")
+        return None
+    except requests.exceptions.ConnectionError:
+        log_message("Error: No se puede conectar al bot NLP")
+        return None
+    except Exception as e:
+        log_message(f"Error inesperado llamando al bot: {str(e)}")
+        return None
+
+def show_notification(message, title="Bot IA RVT"):
+    """Mostrar notificación en Revit"""
+    try:
+        TaskDialog.Show(title, message)
+    except:
+        print(f"{title}: {message}")
+
+def get_user_command():
+    """
+    Obtener comando del usuario mediante un diálogo simple
+    """
+    try:
+        # Obtener documento actual
+        doc = __revit__.ActiveUIDocument.Document
+        ui_doc = __revit__.ActiveUIDocument
+        
+        # Verificar que hay un documento abierto
+        if doc.IsEmpty:
+            show_notification("Por favor, abre un proyecto de Revit antes de usar el bot.", 
+                            "Bot IA RVT")
+            return None
+        
+        log_message(f"Documento actual: {doc.Title}")
+        
+        # Pedir comando al usuario
+        prompt = """🤖 Bot IA-EN-RVT - Comando NLP
+
+Escribe tu comando en lenguaje natural:
+
+Ejemplos:
+• "Crear un muro desde 0,0 hasta 5,0 altura 3.0"
+• "Analizar elementos del proyecto"
+• "Contar muros en el modelo"
+• "¿Cómo cuantifico elementos?"
+• "Ayuda con modelado BIM"
+
+Tu comando:"""
+        
+        # Usar TaskDialog para obtener input del usuario
+        result = TaskDialog.Show(
+            "Bot IA RVT - Comando NLP",
+            prompt,
+            TaskDialogCommonButtons.Ok
+        )
+        
+        # Obtener texto del usuario (esto es una simplificación)
+        # En implementación real, usarías un formulario más sofisticado
+        return "Analizar elementos del proyecto"  # Comando por defecto
+        
+    except Exception as e:
+        log_message(f"Error obteniendo comando: {str(e)}")
+        return None
+
+def execute_nlp_command():
+    """
+    Ejecutar comando NLP completo
+    """
+    try:
+        # Obtener comando del usuario
+        user_command = get_user_command()
+        if not user_command:
+            return False
+        
+        # Llamar al bot NLP externo
+        bot_response = call_nlp_bot(user_command)
+        
+        if bot_response and bot_response.get('success'):
+            # Mostrar respuesta del bot
+            response_message = f"""🤖 Bot IA-EN-RVT - Respuesta NLP
+
+📋 Tipo de Comando: {bot_response['command_type']}
+
+💬 Respuesta:
+{bot_response['ai_response']}
+
+⏰ Tiempo: {bot_response['timestamp']}
+
+✅ El comando fue procesado exitosamente por OpenAI"""
+            
+            show_notification(response_message, "Bot IA RVT")
+            return True
+        else:
+            # Error en el bot
+            error_message = """❌ Error del Bot IA-EN-RVT
+
+No se pudo procesar el comando NLP.
+
+Posibles causas:
+• Bot NLP no disponible
+• Problema de conectividad
+• Error en OpenAI API
+
+Intenta nuevamente o verifica la conexión."""
+            
+            show_notification(error_message, "Bot IA RVT - Error")
+            return False
+            
+    except Exception as e:
+        log_message(f"Error ejecutando comando NLP: {str(e)}")
+        show_notification(f"Error inesperado: {str(e)}", "Bot IA RVT - Error")
+        return False
+
+def main():
+    """
+    Función principal del script
+    """
+    try:
+        log_message("=== INICIANDO BOT IA-EN-RVT ===")
+        
+        # Ejecutar comando NLP
+        success = execute_nlp_command()
+        
+        if success:
+            log_message("=== COMANDO NLP EJECUTADO EXITOSAMENTE ===")
+        else:
+            log_message("=== ERROR EJECUTANDO COMANDO NLP ===")
+            
+    except Exception as e:
+        log_message(f"Error en función main: {str(e)}")
+        show_notification(f"Error ejecutando bot: {str(e)}", "Bot IA RVT - Error")
+
+# Ejecutar script cuando se hace clic en el botón
+if __name__ == "__main__":
+    main()

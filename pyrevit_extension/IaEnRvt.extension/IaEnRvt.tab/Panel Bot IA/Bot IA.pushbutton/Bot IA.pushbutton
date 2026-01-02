@@ -1,0 +1,23 @@
+# Bot IA PushButton Configuration
+# ===============================
+
+# Name of the button
+name: 🤖 IA RVT
+
+# Description
+description: "Bot inteligente para automatización en Revit"
+
+# Tooltip
+tooltip: "Iniciar bot de IA para automatización de Revit"
+
+# Icon
+icon: bot_icon.png
+
+# Author
+author: Eduardo Bascuñán
+
+# Min version
+min_revit_version: 2024
+
+# Execution type
+execution_type: Manual

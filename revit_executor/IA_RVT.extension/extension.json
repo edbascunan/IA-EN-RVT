@@ -1,11 +1,14 @@
 {
-  "name": "IA-EN-RVT",
-  "description": "Sistema BIM Autónomo con IA para Revit 2026",
-  "author": "Eduardo Bascuñán",
-  "engine": {
-    "type": "ironpython",
-    "version": "2.7"
-  },
-  "templates": [],
-  "pyrevitversion": "4.8"
+  "builtin": "False",
+  "default_enabled": "True",
+  "type": "extension",
+  "rocket_mode_compatible": "True",
+  "name": "IA_RVT",
+  "description": "Sistema BIM Autonomo con IA para Revit 2026",
+  "author": "Eduardo Bascunan",
+  "author_profile": "https://github.com/edbascunan",
+  "url": "https://github.com/edbascunan/IA-EN-RVT",
+  "website": "https://github.com/edbascunan/IA-EN-RVT",
+  "image": "",
+  "dependencies": []
 }

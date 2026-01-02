@@ -1,0 +1,30 @@
+# Plan de Implementación Real - Bot NLP + Extensión pyRevit
+
+## Objetivo
+Crear una solución real y funcional con bot NLP autónomo usando OpenAI + extensión pyRevit que aparezca correctamente
+
+## Arquitectura
+- **Bot NLP**: FastAPI + OpenAI SDK ≥ 1.0.0 (24/7 en Railway)
+- **Extensión pyRevit**: Estructura correcta que consuma el bot como servicio
+- **Integración**: pyRevit llama al bot externo, no ejecuta IA directamente
+
+## Pasos a Implementar
+
+### 1. Bot NLP Autonómico (Backend)
+- [ ] Configurar FastAPI con OpenAI SDK 1.0.0+
+- [ ] Crear API endpoint `/ask` para procesar NLP
+- [ ] Implementar Docker container
+- [ ] Deploy en Railway (24/7)
+
+### 2. Extensión pyRevit (Frontend)
+- [ ] Crear estructura correcta de pyRevit
+- [ ] Implementar script que consuma bot externo
+- [ ] Asegurar que aparezca en Revit
+- [ ] Probar integración completa
+
+### 3. Integración Real
+- [ ] pyRevit → Bot NLP → OpenAI → Respuesta
+- [ ] Flujo completo funcional
+- [ ] Testing y verificación
+
+## Estado: INICIANDO IMPLEMENTACIÓN REAL

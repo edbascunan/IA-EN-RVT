@@ -1,0 +1,8 @@
+# PyRevit Tab Configuration for IaEnRvt
+# Configuración de la pestaña del bot IA
+
+{
+    "name": "IaEnRvt",
+    "description": "Pestaña del Bot IA con Procesamiento de Lenguaje Natural para BIM",
+    "author": "Eduardo Bascuñán"
+}

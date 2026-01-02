@@ -1,0 +1,6 @@
+# PyRevit Panel Configuration for Executor
+# Configuración del panel Executor
+
+title: Executor
+tooltip: Panel de ejecución de comandos BIM
+author: Eduardo Bascuñán

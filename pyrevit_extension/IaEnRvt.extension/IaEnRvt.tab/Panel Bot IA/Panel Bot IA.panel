@@ -1,0 +1,8 @@
+# Panel Configuration
+# ===================
+
+# Name of the panel
+name: Panel Bot IA
+
+# Description
+description: "Bot inteligente para automatización en Revit"

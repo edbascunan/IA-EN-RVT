@@ -1,0 +1,11 @@
+# PyRevit PushButton Configuration
+# Configuración del botón que ejecutará el bot NLP
+
+{
+    "text": "Bot IA NLP",
+    "tooltip": "Ejecutar Bot de Inteligencia Artificial con Procesamiento de Lenguaje Natural",
+    "image": "bot_icon.png",
+    "small_image": "bot_icon_small.png",
+    "type": "pushbutton",
+    "author": "Eduardo Bascuñán"
+}

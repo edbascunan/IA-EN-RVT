@@ -1,0 +1,10 @@
+# PyRevit Extension: IaEnRvt
+# Extensión para IA con Bot NLP funcional
+
+{
+    "name": "IaEnRvt",
+    "author": "Eduardo Bascuñán",
+    "description": "Extensión con Bot NLP para automatización BIM en Revit",
+    "version": "1.0.0",
+    "min_revit_version": "2021.0.0"
+}

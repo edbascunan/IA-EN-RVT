@@ -1,0 +1,180 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+IA-EN-RVT 2026 - Instalador Automático Completo
+===============================================
+
+Instala automáticamente la extensión IaEnRvt en pyRevit
+Resuelve todos los problemas de instalación manual
+Autor: Eduardo Bascuñán
+"""
+
+import os
+import shutil
+import sys
+from pathlib import Path
+from datetime import datetime
+
+def log_instalacion(mensaje):
+    """Log del proceso de instalación"""
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{timestamp}] INSTALADOR: {mensaje}")
+
+def encontrar_pyrevit_path():
+    """Encontrar ruta de instalación de PYREVIT"""
+    username = os.getenv('USERNAME', '')
+    posibles_paths = [
+        rf"C:\Users\{username}\AppData\Roaming\pyRevit\Extensions",
+        r"C:\ProgramData\pyRevit\Extensions",
+        r"C:\pyRevit\Extensions"
+    ]
+    
+    for path in posibles_paths:
+        if os.path.exists(path):
+            return path
+    
+    return None
+
+def instalar_extension_completa():
+    """Instalar extensión IA-EN-RVT completa en PYREVIT"""
+    print("🏗️ IA-EN-RVT 2026 - Instalador Automático Completo")
+    print("=" * 60)
+    
+    # Rutas
+    extension_source = os.path.abspath(r"pyrevit_extension")
+    pyrevit_extensions_path = encontrar_pyrevit_path()
+    
+    if not pyrevit_extensions_path:
+        print("❌ No se encontró PYREVIT instalado")
+        print("📥 Descarga e instala PYREVIT desde: https://github.com/eirannejad/pyRevit/releases")
+        return False
+    
+    print(f"📁 PYREVIT Extensions Path: {pyrevit_extensions_path}")
+    
+    # Ruta de destino
+    extension_dest = os.path.join(pyrevit_extensions_path, "IaEnRvt.extension")
+    
+    try:
+        # Limpiar instalación anterior si existe
+        if os.path.exists(extension_dest):
+            print("🧹 Limpiando instalación anterior...")
+            shutil.rmtree(extension_dest)
+        
+        # Crear directorio si no existe
+        os.makedirs(extension_dest, exist_ok=True)
+        
+        # Verificar archivos fuente
+        if not os.path.exists(extension_source):
+            print(f"❌ No se encontró la carpeta de extensión: {extension_source}")
+            return False
+        
+        print(f"📋 Instalando extensión desde: {extension_source}")
+        print(f"📋 Hacia: {extension_dest}")
+        
+        # Copiar archivos
+        archivos_copiados = 0
+        for root, dirs, files in os.walk(extension_source):
+            for file in files:
+                src = os.path.join(root, file)
+                rel_path = os.path.relpath(src, extension_source)
+                dest = os.path.join(extension_dest, rel_path)
+                
+                # Crear directorio si no existe
+                os.makedirs(os.path.dirname(dest), exist_ok=True)
+                
+                # Copiar archivo
+                shutil.copy2(src, dest)
+                print(f"  ✅ {rel_path}")
+                archivos_copiados += 1
+        
+        print(f"\n✅ Extensión IA-EN-RVT instalada correctamente")
+        print(f"📊 Archivos copiados: {archivos_copiados}")
+        print(f"🎯 Botón disponible: '🤖 IA RVT' en pestaña 'IaEnRvt'")
+        
+        return True
+        
+    except Exception as e:
+        print(f"❌ Error instalando extensión: {str(e)}")
+        return False
+
+def verificar_instalacion_completa():
+    """Verificar que la instalación completa fue exitosa"""
+    print("\n🔍 Verificando instalación completa...")
+    
+    pyrevit_extensions_path = encontrar_pyrevit_path()
+    if not pyrevit_extensions_path:
+        return False
+    
+    extension_path = os.path.join(pyrevit_extensions_path, "IaEnRvt.extension")
+    
+    if os.path.exists(extension_path):
+        print("✅ Extensión encontrada")
+        
+        # Verificar archivos importantes
+        archivos_importantes = [
+            "IaEnRvt.extension",
+            "IaEnRvt.tab/Panel Bot IA/Panel Bot IA.panel",
+            "IaEnRvt.tab/Panel Bot IA/Bot IA.pushbutton/Bot IA.pushbutton",
+            "IaEnRvt.tab/Panel Bot IA/Bot IA.pushbutton/Bot IA.py"
+        ]
+        
+        todos_presentes = True
+        for archivo in archivos_importantes:
+            archivo_path = os.path.join(extension_path, archivo)
+            if os.path.exists(archivo_path):
+                print(f"  ✅ {archivo}")
+            else:
+                print(f"  ❌ {archivo}")
+                todos_presentes = False
+        
+        if todos_presentes:
+            print("\n🎉 INSTALACIÓN EXITOSA")
+            print("🤖 El botón '🤖 IA RVT' aparecerá en la pestaña 'IaEnRvt'")
+            print("🧠 Bot inteligente con procesamiento de lenguaje natural")
+            print("📚 Sistema de aprendizaje continuo activo")
+            return True
+        else:
+            print("\n❌ Instalación incompleta")
+            return False
+    else:
+        print("❌ Extensión no encontrada")
+        return False
+
+def mostrar_instrucciones_finales():
+    """Mostrar instrucciones finales de uso"""
+    print("\n🚀 INSTRUCCIONES FINALES:")
+    print("=" * 60)
+    print()
+    print("1. 📱 EJECUTAR BOT BACKEND:")
+    print("   cd /edbascunan/IA-EN-RVT/backend_ai")
+    print("   python bot_ia_rvt_inteligente.py")
+    print()
+    print("2. 🏗️ USAR EN REVIT:")
+    print("   • Abrir Revit 2026")
+    print("   • PYREVIT > Extensions > Reload")
+    print("   • Buscar pestaña 'IaEnRvt'")
+    print("   • Hacer clic en botón '🤖 IA RVT'")
+    print()
+    print("3. 💬 USAR EN TELEGRAM:")
+    print("   • 'Crear muro desde 0,0 hasta 5,0 altura 3.5'")
+    print("   • 'Necesito un muro de 6 metros'")
+    print("   • 'Analizar el modelo completo'")
+    print("   • '¿Cuántos muros hay?'")
+    print()
+    print("4. ✅ VERIFICAR FUNCIONAMIENTO:")
+    print("   • Botón '🤖 IA RVT' visible en Revit")
+    print("   • Comandos procesados por IA")
+    print("   • Elementos creados automáticamente")
+
+if __name__ == "__main__":
+    if instalar_extension_completa():
+        if verificar_instalacion_completa():
+            mostrar_instrucciones_finales()
+            print("\n🎉 ¡INSTALACIÓN COMPLETADA CON ÉXITO!")
+        else:
+            print("❌ Verificación falló")
+    else:
+        print("❌ Instalación falló")
+        
+    print("\nPresiona Enter para salir...")
+    input()

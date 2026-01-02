@@ -1,0 +1,207 @@
+{
+  "normas_argentinas": {
+    "IRAM": {
+      "estructura": [
+        {
+          "codigo": "IRAM 11507",
+          "titulo": "Muros divisorios. Terminología",
+          "categoria": "muros",
+          "descripcion": "Norma que establece la terminología y clasificación de muros divisorios en Argentina."
+        },
+        {
+          "codigo": "IRAM 11504",
+          "titulo": "Vivienda de interés social. Criterios de satisfacción de requisitos básicos",
+          "categoria": "vivienda",
+          "descripcion": "Criterios básicos para vivienda de interés social en Argentina."
+        },
+        {
+          "codigo": "IRAM 11505",
+          "titulo": "Vivienda de interés social. Criterios de satisfacción de requisitos básicos. Anexo",
+          "categoria": "vivienda",
+          "descripcion": "Anexo con criterios específicos para vivienda de interés social."
+        },
+        {
+          "codigo": "IRAM 11625",
+          "titulo": "Sistemas de impermeabilización",
+          "categoria": "impermeabilizacion",
+          "descripcion": "Sistemas y materiales para impermeabilización en construcción argentina."
+        },
+        {
+          "codigo": "IRAM 1626",
+          "titulo": "Normas generales de redacción de proyectos",
+          "categoria": "proyectos",
+          "descripcion": "Normas generales para la redacción de proyectos de construcción."
+        }
+      ],
+      "sismica": [
+        {
+          "codigo": "INPRES-CIRSOC 103",
+          "titulo": "Reglamento Argentino de Construcción Sismorresistente",
+          "categoria": "sismica",
+          "descripcion": "Reglamento oficial para construcción sismorresistente en Argentina."
+        }
+      ],
+      "estructurales": [
+        {
+          "codigo": "CIRSOC 201",
+          "titulo": "Proyecto, cálculo y ejecución de estructuras de acero para edificios",
+          "categoria": "estructuras",
+          "descripcion": "Reglamento para estructuras de acero en edificios."
+        },
+        {
+          "codigo": "CIRSOC 201-1",
+          "titulo": "Estructuras de acero. Comentarios y ejemplos de cálculo",
+          "categoria": "estructuras",
+          "descripcion": "Comentarios y ejemplos del reglamento CIRSOC 201."
+        }
+      ]
+    },
+    "normas_sanitarias": {
+      "agua": [
+        {
+          "codigo": "IRAM 1525",
+          "titulo": "Agua para consumo humano",
+          "categoria": "sanitaria",
+          "descripcion": "Calidad del agua para consumo humano en Argentina."
+        }
+      ],
+      "gas": [
+        {
+          "codigo": "IRAM 1651",
+          "titulo": "Instalaciones domiciliarias de gas",
+          "categoria": "gas",
+          "descripcion": "Instalaciones de gas natural y envasado para uso doméstico."
+        }
+      ]
+    }
+  },
+  "materiales_argentinos": {
+    "cemento": {
+      "portland": {
+        "CPN 40": "Cemento Portland Normal tipo CP N 40",
+        "CPN 30": "Cemento Portland Normal tipo CP N 30",
+        "CP A 40": "Cemento Portland con adiciones tipo CP A 40"
+      }
+    },
+    "hormigones": {
+      "resistencias": ["H15", "H20", "H25", "H30", "H35", "H40"],
+      "clases": {
+        "H15": "15 MPa - Hormigones de limpieza y rellenos",
+        "H20": "20 MPa - Hormigones para obras generales",
+        "H25": "25 MPa - Hormigones estructurales básicos",
+        "H30": "30 MPa - Hormigones estructurales estándar",
+        "H35": "35 MPa - Hormigones estructurales especiales",
+        "H40": "40 MPa - Hormigones de alta resistencia"
+      }
+    },
+    "ladrillos": {
+      "ceramicos": {
+        "ladrillo_comun": "25 x 12 x 5 cm - Ladrillo común cerámico",
+        "ladrillo_hueco": "25 x 12 x 7.5 cm - Ladrillo hueco cerámico",
+        "ladrillo_panal": "25 x 12 x 15 cm - Ladrillo panal (hueco)"
+      },
+        "cemento": {
+          "bloque_hormigon": "40 x 20 x 15 cm - Bloque de hormigón",
+          "bloque_cemento": "30 x 15 x 15 cm - Bloque de cemento"
+        }
+      }
+    },
+    "maderas": {
+      "nativas": ["Quebracho", "Lapacho", "Virapitá", "Algarrobo"],
+      "comerciales": ["Pino", "Eucalipto", "Saligna", "Eucalipto Grandis"]
+    }
+  },
+  "climatizacion": {
+    "zonas_termicas": {
+      "zona_1": "Norte cálido - Temperatura mínima exterior -3°C",
+      "zona_2": "Norte templado - Temperatura mínima exterior -5°C",
+      "zona_3": "Centro templado - Temperatura mínima exterior -10°C",
+      "zona_4": "Sur frío - Temperatura mínima exterior -15°C",
+      "zona_5": "Sur muy frío - Temperatura mínima exterior -20°C"
+    },
+    "provincias_por_zona": {
+      "zona_1": ["Chaco", "Formosa", "Corrientes", "Misiones"],
+      "zona_2": ["Salta", "Jujuy", "Tucumán", "Catamarca", "La Rioja", "San Juan"],
+      "zona_3": ["Santa Fe", "Entre Ríos", "Córdoba", "San Luis", "Mendoza"],
+      "zona_4": ["Buenos Aires", "La Pampa", "Río Negro", "Neuquén", "Chubut"],
+      "zona_5": ["Santa Cruz", "Tierra del Fuego"]
+    }
+  },
+  "urbanismo": {
+    "tipologias_vivienda": {
+      "casa": "Vivienda unifamiliar aislada",
+      "duplex": "Vivienda bifamiliar en lote",
+      "dpto_edificio": "Departamento en edificio multifamiliar",
+      "town_house": "Vivienda en línea con jardín",
+      "ph": "Casa ph (planta baja y primer piso)"
+    },
+    "usos_suelo": {
+      "r1": "Residencial 1 - Vivienda unifamiliar",
+      "r2": "Residencial 2 - Multifamiliar hasta 2 pisos",
+      "r3": "Residencial 3 - Multifamiliar hasta 4 pisos",
+      "r4": "Residencial 4 - Multifamiliar hasta 8 pisos",
+      "r5": "Residencial 5 - Multifamiliar más de 8 pisos"
+    }
+  },
+  "tecnologias_construccion": {
+    "sistemas_estructurales": {
+      "hormigon_armado": "Sistema de hormigón armado tradicional",
+      "mamposteria": "Sistema de mampostería de ladrillos o bloques",
+      "acero": "Sistema de estructura metálica",
+      "prefabricado": "Sistema prefabricado de hormigón",
+      "secado": "Sistema de construcción en seco (drywall)"
+    },
+    "sistemas_impermeabilizacion": {
+      "asfaltica": "Membrana asfáltica con refuerzo",
+      "pvc": "Membrana de PVC adherida",
+      "epdm": "Membrana de EPDM",
+      "poliuretano": "Sellador poliuretánico",
+      "acrylico": "Membrana acrílica"
+    }
+  },
+  "dimensiones_estandar": {
+    "habitaciones": {
+      "living": "4.00 x 3.00 m mínimo",
+      "comedor": "3.00 x 2.50 m mínimo",
+      "cocina": "2.50 x 2.00 m mínimo",
+      "dormitorio_principal": "3.50 x 3.00 m mínimo",
+      "dormitorio_secundario": "3.00 x 2.50 m mínimo",
+      "baño": "2.00 x 1.50 m mínimo",
+      "baño_principal": "2.50 x 1.80 m mínimo"
+    },
+    "alturas": {
+      "nivel_planta_baja": "2.60 m mínimo",
+      "nivel_piso_superior": "2.50 m mínimo",
+      "altura_minima_comedor": "2.70 m",
+      "altura_minima_hall": "2.40 m"
+    },
+    "escaleras": {
+      "ancho_minimo": "0.80 m",
+      "contrahuella_maxima": "0.18 m",
+      "huella_minima": "0.25 m",
+      "huella_maxima": "0.32 m"
+    }
+  },
+  "precios_referencia": {
+    "materiales_2025": {
+      "cemento_bolsa_50kg": "800-1200 ARS",
+      "arena_m3": "3000-5000 ARS",
+      "piedra_m3": "4000-6000 ARS",
+      "ladrillo_comun_unidad": "50-80 ARS",
+      "ladrillo_hueco_unidad": "80-120 ARS",
+      "hierro_6mm_kg": "200-300 ARS",
+      "hierro_10mm_kg": "220-350 ARS",
+      "hierro_12mm_kg": "230-380 ARS",
+      "hierro_16mm_kg": "250-400 ARS"
+    },
+    "mano_obra_2025": {
+      "albañil_jornal_dia": "8000-15000 ARS",
+      "peon_jornal_dia": "6000-10000 ARS",
+      "oficial_jornal_dia": "7000-12000 ARS",
+      "pintor_m2": "1500-2500 ARS",
+      "ceramista_m2": "2000-3500 ARS",
+      "plomero_hora": "3000-5000 ARS",
+      "electricista_hora": "3500-5500 ARS"
+    }
+  }
+}

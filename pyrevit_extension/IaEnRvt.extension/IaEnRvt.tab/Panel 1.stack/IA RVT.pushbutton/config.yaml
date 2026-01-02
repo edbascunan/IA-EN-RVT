@@ -1,0 +1,14 @@
+name: IA RVT
+tooltip: |
+    IA-EN-RVT 2026 - Bot Inteligente
+    Procesa instrucciones en lenguaje natural
+    y ejecuta comandos en Revit
+    Con aprendizaje continuo
+text: 🤖 IA RVT
+shortdescription: Bot Inteligente - IA para Revit
+author: Eduardo Bascuñán
+help_url: https://github.com/ebascunan/ia-en-rvt
+min_revit: 2022
+max_revit: 2026
+availability: always
+execution_type: automation

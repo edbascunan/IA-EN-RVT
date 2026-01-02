@@ -1,0 +1,8 @@
+{
+  "name": "BotIA",
+  "description": "Bot Inteligente con IA para Autodesk Revit",
+  "author": "Eduardo Bascunan",
+  "version": "1.0.0",
+  "engine": "revit",
+  "type": "extension"
+}

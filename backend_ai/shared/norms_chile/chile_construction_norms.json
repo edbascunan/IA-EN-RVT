@@ -1,0 +1,271 @@
+{
+  "normas_chilenas": {
+    "NCh": {
+      "estructura": [
+        {
+          "codigo": "NCh 170",
+          "titulo": "Hormigón - Especificaciones técnicas",
+          "categoria": "hormigon",
+          "descripcion": "Especificaciones técnicas para hormigones estructurales en Chile."
+        },
+        {
+          "codigo": "NCh 1811",
+          "titulo": "Impermeabilización de techumbres y muros",
+          "categoria": "impermeabilizacion",
+          "descripcion": "Norma para sistemas de impermeabilización en construcción chilena."
+        },
+        {
+          "codigo": "NCh 1971",
+          "titulo": "Hormigón - Materiales - Especificaciones",
+          "categoria": "hormigon",
+          "descripcion": "Especificaciones de materiales para hormigón según normativa chilena."
+        },
+        {
+          "codigo": "NCh 1847",
+          "titulo": "Construcción - Terminología",
+          "categoria": "terminologia",
+          "descripcion": "Terminología técnica para la construcción en Chile."
+        }
+      ],
+      "sismica": [
+        {
+          "codigo": "NCh 433",
+          "titulo": "Diseño sísmico de edificios",
+          "categoria": "sismica",
+          "descripcion": "Norma chilena para diseño sísmico de edificios."
+        },
+        {
+          "codigo": "NCh 2369",
+          "titulo": "Diseño sísmico de estructuras e instalaciones industriales",
+          "categoria": "sismica",
+          "descripcion": "Norma para diseño sísmico de estructuras industriales en Chile."
+        }
+      ],
+      "estructurales": [
+        {
+          "codigo": "NCh 430",
+          "titulo": "Hormigón armado - Requisitos de diseño y cálculo",
+          "categoria": "estructuras",
+          "descripcion": "Requisitos para diseño y cálculo de hormigón armado en Chile."
+        },
+        {
+          "codigo": "NCh 2111",
+          "titulo": "Construcción de viviendas de hormigón armado",
+          "categoria": "vivienda",
+          "descripcion": "Norma para construcción de viviendas con hormigón armado."
+        }
+      ]
+    },
+    "ord_minist": {
+      "agua": [
+        {
+          "codigo": "DS 594",
+          "titulo": "Condiciones sanitarias y ambientales básicas en los lugares de trabajo",
+          "categoria": "sanitaria",
+          "descripcion": "Decreto supremo sobre condiciones sanitarias en lugares de trabajo."
+        },
+        {
+          "codigo": "DS 209",
+          "titulo": "Reglamento para el control de la contaminación del agua",
+          "categoria": "sanitaria",
+          "descripcion": "Reglamento para control de contaminación hídrica en Chile."
+        }
+      ],
+      "gas": [
+        {
+          "codigo": "DS 115",
+          "titulo": "Reglamento de instalaciones de gas",
+          "categoria": "gas",
+          "descripcion": "Reglamento para instalaciones de gas en Chile."
+        }
+      ]
+    }
+  },
+  "materiales_chilenos": {
+    "cemento": {
+      "portland": {
+        "CPH 40": "Cemento Portland Normal CP N 40",
+        "CPH 30": "Cemento Portland Normal CP N 30",
+        "CPA 40": "Cemento Portland con adiciones CP A 40"
+      }
+    },
+    "hormigones": {
+      "resistencias": ["H15", "H20", "H25", "H30", "H35", "H40", "H45", "H50"],
+      "clases": {
+        "H15": "15 MPa - Hormigones de limpieza",
+        "H20": "20 MPa - Hormigones para obras generales",
+        "H25": "25 MPa - Hormigones estructurales básicos",
+        "H30": "30 MPa - Hormigones estructurales estándar",
+        "H35": "35 MPa - Hormigones estructurales especiales",
+        "H40": "40 MPa - Hormigones de alta resistencia",
+        "H45": "45 MPa - Hormigones de muy alta resistencia",
+        "H50": "50 MPa - Hormigones de ultra alta resistencia"
+      }
+    },
+    "ladrillos": {
+      "ceramicos": {
+        "ladrillo_comun": "30 x 15 x 7.5 cm - Ladrillo común cerámico",
+        "ladrillo_hueco": "30 x 15 x 15 cm - Ladrillo hueco cerámico",
+        "ladrillo_plano": "30 x 15 x 10 cm - Ladrillo plano"
+      },
+      "cemento": {
+        "bloque_hormigon": "40 x 20 x 20 cm - Bloque de hormigón",
+        "bloque_cemento": "40 x 15 x 15 cm - Bloque de cemento"
+      }
+    },
+    "maderas": {
+      "nativas": ["Araucaria", "Coigüe", "Lenga", "Nothofagus"],
+      "comerciales": ["Pino", "Eucalipto", "Eucalyptus globulus", "Pinus radiata"],
+      "certificadas": ["FSC", "PEFC"]
+    }
+  },
+  "climatizacion": {
+    "zonas_termicas": {
+      "zona_norte": "Norte de Chile - Clima desértico",
+      "zona_centro": "Centro de Chile - Clima mediterráneo",
+      "zona_sur": "Sur de Chile - Clima templado húmedo",
+      "zona_austral": "Zona Austral - Clima subantártico"
+    },
+    "regiones": {
+      "regiones_norte": ["XV", "I", "II", "III", "IV"],
+      "regiones_centro": ["V", "VI", "VII", "VIII", "XVI"],
+      "regiones_sur": ["IX", "XIV", "X", "XI"],
+      "regiones_australes": ["XII"]
+    }
+  },
+  "urbanismo": {
+    "tipologias_vivienda": {
+      "casa": "Casa unifamiliar",
+      "duplex": "Casa bifamiliar",
+      "departamento": "Departamento en edificio",
+      "condominio": "Condominio horizontal",
+      "villa": "Vivienda en villa"
+    },
+    "reglamentos_urbanos": {
+      "PRC": "Plan Regulador Comunal",
+      "PRM": "Plan Regulador Metropolitano",
+      "LUC": "Ley de Urbanismo y Construcciones"
+    }
+  },
+  "tecnologias_construccion": {
+    "sistemas_estructurales": {
+      "hormigon_armado": "Sistema tradicional de hormigón armado",
+      "mamposteria_confinada": "Mampostería confinada con elementos de hormigón",
+      "acero_estructural": "Sistema de acero estructural",
+      "prefabricado": "Sistemas prefabricados de hormigón",
+      "construccion_seca": "Construcción en seco (sistema metalcon)",
+      "estructura_madera": "Estructura de madera (sistema tradicional)"
+    },
+    "sistemas_impermeabilizacion": {
+      "asfaltica": "Membrana asfáltica SBS",
+      "pvc": "Membrana de PVC con protección",
+      "epdm": "Membrana EPDM",
+      "poliuretano": "Sellado poliuretánico",
+      "acrylico": "Sistema acrílico",
+      "cristalizado": "Sistema cristalizado"
+    }
+  },
+  "dimensiones_estandar": {
+    "habitaciones": {
+      "living": "4.50 x 3.50 m mínimo",
+      "comedor": "3.50 x 3.00 m mínimo",
+      "cocina": "3.00 x 2.50 m mínimo",
+      "dormitorio_principal": "4.00 x 3.50 m mínimo",
+      "dormitorio_secundario": "3.50 x 3.00 m mínimo",
+      "baño": "2.20 x 1.60 m mínimo",
+      "baño_principal": "2.80 x 2.00 m mínimo"
+    },
+    "alturas": {
+      "nivel_planta_baja": "2.70 m mínimo",
+      "nivel_piso_superior": "2.60 m mínimo",
+      "altura_minima_comedor": "2.80 m",
+      "altura_minima_hall": "2.50 m"
+    },
+    "escaleras": {
+      "ancho_minimo": "0.90 m",
+      "contrahuella_maxima": "0.18 m",
+      "huella_minima": "0.28 m",
+      "huella_maxima": "0.34 m"
+    }
+  },
+  "reglamentos_tecnicos": {
+    "electricidad": [
+      {
+        "codigo": "NCh 4/2003",
+        "titulo": "Instalaciones de consumo en baja tensión",
+        "categoria": "electrica",
+        "descripcion": "Reglamento para instalaciones eléctricas de baja tensión."
+      }
+    ],
+    "gas": [
+      {
+        "codigo": "NCh 2061",
+        "titulo": "Instalaciones de gas para uso doméstico",
+        "categoria": "gas",
+        "descripcion": "Norma para instalaciones de gas doméstico en Chile."
+      }
+    ],
+    "calefaccion": [
+      {
+        "codigo": "NCh 1079",
+        "titulo": "Ventilación de viviendas",
+        "categoria": "ventilacion",
+        "descripcion": "Norma para sistemas de ventilación en viviendas."
+      }
+    ]
+  },
+  "certificaciones": {
+    "sostenibilidad": {
+      "CES": "Certificación de Edificación Sostenible",
+      "LEED": "Leadership in Energy and Environmental Design",
+      "BREEAM": "Building Research Establishment Environmental Assessment Method"
+    },
+    "seguridad": [
+      {
+        "certificacion": "Resistencia al fuego",
+        "norma": "NCh 1972",
+        "descripcion": "Ensayos de resistencia al fuego en elementos de construcción."
+      }
+    ]
+  },
+  "precios_referencia": {
+    "materiales_2025": {
+      "cemento_bolsa_50kg": "3500-4500 CLP",
+      "arena_m3": "15000-25000 CLP",
+      "piedra_m3": "20000-30000 CLP",
+      "ladrillo_comun_unidad": "200-300 CLP",
+      "ladrillo_hueco_unidad": "350-500 CLP",
+      "hierro_6mm_kg": "800-1200 CLP",
+      "hierro_10mm_kg": "900-1400 CLP",
+      "hierro_12mm_kg": "1000-1500 CLP",
+      "hierro_16mm_kg": "1100-1600 CLP"
+    },
+    "mano_obra_2025": {
+      "albañil_jornal_dia": "35000-55000 CLP",
+      "peon_jornal_dia": "25000-40000 CLP",
+      "oficial_jornal_dia": "30000-50000 CLP",
+      "pintor_m2": "6000-10000 CLP",
+      "ceramista_m2": "8000-14000 CLP",
+      "plomero_hora": "12000-20000 CLP",
+      "electricista_hora": "14000-22000 CLP"
+    }
+  },
+  "aspectos_sismicos": {
+    "zonificacion_sismica": {
+      "zona_1": "Baja sismicidad",
+      "zona_2": "Media sismicidad",
+      "zona_3": "Alta sismicidad",
+      "zona_4": "Muy alta sismicidad"
+    },
+    "factores_riesgo": {
+      "tipo_suelo": {
+        "A": "Roca competente",
+        "B": "Roca de competencia media",
+        "C": "Suelo muy denso o roca blanda",
+        "D": "Suelo rígido",
+        "E": "Suelo blando",
+        "F": "Suelo que requiere evaluación específica"
+      }
+    }
+  }
+}

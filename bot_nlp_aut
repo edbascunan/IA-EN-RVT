@@ -1,0 +1,19 @@
+# Configuración de variables de entorno
+# IMPORTANTE: No subir este archivo a GitHub
+
+# OpenAI API Key (obtener en https://platform.openai.com/api-keys)
+OPENAI_API_KEY=tu_openai_api_key_aqui
+
+# Configuración del servidor
+HOST=0.0.0.0
+PORT=8000
+DEBUG=false
+
+# Configuración de logs
+LOG_LEVEL=INFO
+
+# Configuración de CORS
+ALLOWED_ORIGINS=*
+
+# Configuración de seguridad
+SECRET_KEY=tu_secret_key_aqui_para_produccion
